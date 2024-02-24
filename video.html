@@ -1,0 +1,254 @@
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+
+
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      color: white;
+ 
+
+    }
+
+    .product {
+      width: 30%;
+      border: 1px solid none;
+      padding: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+      color: white;
+    }
+
+    .product:hover {
+      transform: scale(1.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      color: beige;
+      text-align: center;
+      text-decoration: double;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .product p {
+      font-size: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    .product span {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    .product input {
+      width: 50px;
+      height: 30px;
+      border: 1px solid none;
+      color: #eee;
+      text-align: center;
+      align-items: center;
+    }
+
+    .product button {
+      width: 100%;
+      height: 40px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      opacity: 0.8;
+    }
+
+    .bill {
+      width: 80%;
+      margin: 20px auto;
+      border: 1px solid none;
+      padding: 10px;
+      display: none;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    .bill table {
+      width: 100%;
+      border-collapse: collapse;
+      color: wheat;
+    }
+
+.bill td{
+  border: 1px solid none;
+      padding: 10px;
+      text-align: left;
+      color: white;
+}
+
+    .bill th {
+      border: 1px solid none;
+      padding: 10px;
+      text-align: left;
+      color: black;
+    }
+
+    .bill th {
+      background-color: #eee;
+    }
+
+    .bill .total {
+      font-weight: bold;
+    }
+
+    .bill button {
+      width: 100%;
+      height: 40px;
+      background-color: #0f0;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .bill button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product" id="product1">
+      <img src="product1.jpg" alt="Product 1">
+      <h3>Softix damiii</h3>
+      <br>
+      <p><b>-Grade B synthetic rubbers
+        <br>
+         -Heel pads included</b>
+
+         <br>
+        <b>-Grippy studs for indoor futsal</b>
+      </p>
+      <span>रू 1500</span>
+      <br>
+      <input type="number" min="1" max="10" value="1" id="quantity1">
+      <button onclick="purchase(1)">Purchase</button>
+    </div>
+    <div class="product" id="product2">
+      <img src="product2.jpg" alt="Product 2">
+      <h3>Softix jhan damiiiii</h3>
+      <br>
+      <p><b>-Grade A synthetic rubbers
+        <br>
+         -Heel pads included
+        
+         <br>
+         -Toe protector included
+         <br>
+         Used antiperspirant powder
+        </b>
+
+         <br>
+        <b>-Grippy studs for indoor futsal</b>
+      </p>
+      <span>रू 1990</span>
+      <br>
+      <input type="number" min="1" max="10" value="1" id="quantity2">
+      <button onclick="purchase(2)">Purchase</button>
+    </div>
+    <div class="product" id="product3">
+      <img src="product3.jpg" alt="Product 3">
+      <h3>Softix Tanashah</h3>
+      <br>
+      <p><b>-GRADE A+ SYNTHETIC POWDER
+<BR>
+        -EQUIPPED WITH HIGHEST QUALITY MATERIAL
+        <BR>
+        -COMFORT AT IT'S MAX
+        <BR>
+        -DURABLE LIKE NOTHING ELSE
+        <BR>
+        -EQUIPPED WITH BEST QUALITY OF ANTIPERSPIRANT POWDER
+      </b></p>
+      <span>रू 2490</span>
+
+      <br>
+      <input type="number" min="1" max="10" value="1" id="quantity3">
+      <button onclick="purchase(3)">Purchase</button>
+    </div>
+  </div>
+  <br>
+  <div class="bill">
+    <h3>Bill</h3>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+      </tr>
+      <tr id="row1">
+        <td>Softix damiii</td>
+        <td id="qty1">0</td>
+        <td id="price1">रू 150-</td>
+        <td id="sub1">रू 0</td>
+      </tr>
+      <tr id="row2">
+        <td>Softix jhan damiiiii</td>
+        <td id="qty2">0</td>
+        <td id="price2">रू 1990</td>
+        <td id="sub2">रू 0</td>
+      </tr>
+      <tr id="row3">
+        <td>Softix tanashah</td>
+        <td id="qty3">0</td>
+        <td id="price3">रू 2490</td>
+        <td id="sub3">रू 0</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="total">Total</td>
+        <td id="total">रू 0</td>
+      </tr>
+    </table>
+    <button onclick="pay()">Pay</button>
+  </div>
+  <script>
+    function purchase(id) {
+      var quantity = document.getElementById("quantity" + id).value;
+      var price = document.getElementById("price" + id).innerHTML.slice(2);
+      var subtotal = quantity * price;
+      document.getElementById("qty" + id).innerHTML = quantity;
+      document.getElementById("sub" + id).innerHTML = "रू " + subtotal;
+      document.getElementById("row" + id).style.display = "table-row";
+      var total = document.getElementById("total").innerHTML.slice(2);
+      total = Number(total) + subtotal;
+      document.getElementById("total").innerHTML = "रू " + total;
+      document.querySelector(".bill").style.display = "block";
+    }
+
+    function pay() {
+      window.location.href = "payment.html";
+    }
+  </script>
+</body>
+</html>
