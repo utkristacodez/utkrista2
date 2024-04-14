@@ -7,6 +7,18 @@ body {
     background-color:silver;
 }
 
+
+body {
+            padding: 25px;
+            color: black;
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
