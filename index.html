@@ -1,209 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body style="background-color:powderblue;">
-
-
-
-
-<div class="navbar">
-  <div class="logo">
-    <a href="index.html"><img src="flag.gif" alt="Logo">
-  </div>
-  <div class="nav-items">
-
-    <a href="contact.html">Contact📞</a>
-    <a href="utkrista.html">About</a>
-  
-  </div>
-
-
-  </div>
-</div>
-
-
-
-<style>
-  /* Style the carousel container */
-  .carousel {
-    width: 80%;
-    margin: auto;
-    border: 1px solid none;
-    overflow: hidden;
-
-  }
-
-  /* Style the carousel items */
-  .carousel-item {
-    display: none;
-    width: 100%;
-    height: 300px;
-    text-align: center;
-  }
-
-  /* Style the product image */
-  .product-image {
-    max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    object-fit: contain;
-    border: 1px solid #ddd;
-  border-radius: 4px;
- 
-  }
-
-  /* Style the product name */
-  .product-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
-  /* Style the product price */
-  .product-price {
-    font-size: 18px;
-    color: green;
-    margin-top: 5px;
-  }
-
-  /* Style the active carousel item */
-  .active {
-    display: block;
-  }
-
-  /* Style the previous and next buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the next button on the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-</style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    
 </head>
 <body>
-<!-- Create a carousel container -->
-<div class="carousel">
 
-  <!-- Add carousel items with product image, name, and price -->
-  <div class="carousel-item active">
-    <a href="video.html"><img src="product1.jpg" class="product-image"></a>
-    <p class="product-name">Softix damiii</p>
-    <p class="product-price">RS 1500</p>
-  </div>
-
-  <div class="carousel-item">
-    <a href="video.html"><img src="product2.jpg" class="product-image"></a>
-    <p class="product-name">Softix jhan damiiiii</p>
-    <p class="product-price">RS 1990</p>
-  </div>
-
-  <div class="carousel-item">
-    <a href="video.html"><img src="product3.jpg" class="product-image"></a>
-    <p class="product-name">Softix Tanashah</p>
-    <p class="product-price">RS 2490</p>
-  </div>
-
-  <!-- Add previous and next buttons -->
-  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-  <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
-
-<!-- Add JavaScript code to control the carousel behavior -->
-<script>
-  // Get the carousel items
-  var items = document.getElementsByClassName("carousel-item");
-
-  // Set the current slide index
-  var slideIndex = 0;
-
-  // Show the first slide
-  showSlide(slideIndex);
-
-  // Define a function to show a slide
-  function showSlide(n) {
-    // Loop through all the items and hide them
-    for (var i = 0; i < items.length; i++) {
-      items[i].className = "carousel-item";
-    }
-
-    // Adjust the slide index if it is out of range
-    if (n >= items.length) {
-      slideIndex = 0;
-    }
-    if (n < 0) {
-      slideIndex = items.length - 1;
-    }
-
-    // Make the current item active
-    items[slideIndex].className = "carousel-item active";
-  }
-
-  // Define a function to change the slide by a given amount
-  function changeSlide(n) {
-    // Increment the slide index by n
-    slideIndex += n;
-
-    // Show the new slide
-    showSlide(slideIndex);
-  }
-
-  // Define a function to change the slide automatically every 2-3 seconds
-  function autoSlide() {
-    // Increment the slide index by 1
-    slideIndex++;
-
-    // Show the new slide
-    showSlide(slideIndex);
-
-    // Set a random timeout between 2 and 3 seconds
-    var timeout = Math.floor(Math.random() * 1000) + 2000;
-
-    // Repeat the function after the timeout
-    setTimeout(autoSlide, timeout);
-  }
-
-  // Start the auto slide function
-  autoSlide();
-</script>
-  
-  
-<footer>
-        <div id = "footer"class="social-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/OIG4.t25fjEhGTCPyxDnzzI2r?pid=ImgGn" alt="Logo">
+            </div>
+            <div class="site-name">UTKRISTA</div>
+            <div class="navbar-links">
+                <a href="#contact">CONTACT</a>
+                <a href="#about">ABOUT</a>
+                <a href="#subscribe">SUBSCRIBE</a>
+            </div>
         </div>
-        <div class="copyright">
-            &copy; 2023 Utkrista. All Rights Reserved.
+    </nav>
+   
+    <div class="note">
+        <div class="note-header">
+            <span class="note-title">WILD PLOT</span>
+            <span class="note-date">2078/09/19</span>
         </div>
-    </footer>
+       
+    </div>
 
-</div>
+
+    <script src='script.js'></script>
+
 </body>
 </html>
