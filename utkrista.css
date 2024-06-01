@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:silver;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+#logo-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+#logo {
+  width: 1.8cm;
+  height: 2cm;
+}
+
+#social-icons {
+  position: absolute;
+  top:  44%;
+  left: 180%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#social-icons li {
+  margin: 0 10px;
+  transform-origin: 50% 50%;
+  transform: scale(0);
+
+  transition: transform 0.3s ease-in-out;
+}
+
+#logo-container.active #social-icons {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#logo-container.active #social-icons li {
+  transform: scale(1);
+}
+
+.social-icons{
+    height: 2cm;
+    width: 1cm;
+}
+
+
+* { color:#171717; text-decoration: none;}
+
+.card {
+    width: 300px;
+    background: lightcyan;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: aqua;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile p {
+    margin: 5px 0;
+}
+
+.profile{
+    font-family: cursive;
+}
+
+.description {
+    margin-bottom: 20px;
+    font-family: cursive;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 5px;
+}
+
+.social-link img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-link img:hover {
+    transform: scale(1.2);
+    background-color: aqua;
+}
