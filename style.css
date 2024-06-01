@@ -128,15 +128,13 @@ body {
   margin-bottom: 30px; /* Updated margin to maintain space */
   padding-bottom: 10px;
 }
-
-
 .video-box {
 
 
   
   overflow: hidden;
   transition: transform 0.3s ease;
-  height: 500px;
+  height: 300px;
   width: 300px;
   margin-bottom: 10px;
   padding-bottom: 10px;
