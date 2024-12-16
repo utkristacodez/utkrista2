@@ -33,7 +33,6 @@
         .image-container img {
             width: 200px;
             height: 200px;
-            
         }
         form {
             display: flex;
@@ -80,8 +79,8 @@
                 }
             })
             .then(response => response.text())
-            .then(data => {
-                alert(data);
+            .then(() => {
+                alert('YOUR ORDER HAS BEEN SUCCESSFULLY PLACED.');
                 alert('Please contact us at: 9744232216');
             })
             .catch(error => console.error('Error:', error));
@@ -99,11 +98,11 @@
     <div class="container">
         <div class="image-container">
             <img src="image.png" alt="eSewa QR Code">
+            <p><b>Scan this QR Image to make the Payment.</b></p>
         </div>
         <div>
             <h1>Make a Payment</h1>
-            <p>Scan the QR code above to make a payment.</p>
-
+        
             <form onsubmit="submitForm(event)">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br>
