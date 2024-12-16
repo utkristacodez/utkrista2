@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment System</title>
+    <link rel="stylesheet" type="text/css" href="esewa.css">
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            fetch('/submit', {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                alert('Please contact us at: +1234567890');
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        window.onload = function() {
+            let today = new Date();
+            let deliveryDate = new Date(today.setDate(today.getDate() + 14)).toISOString().split('T')[0];
+            document.getElementById('date').value = deliveryDate;
+            document.getElementById('date').disabled = true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Make a Payment</h1>
+    <img src="esewa_qr.png" alt="eSewa QR Code">
+    <p>Scan the QR code above to make a payment.</p>
+
+    <form onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="date">Date for Delivery:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="location">Delivery Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
