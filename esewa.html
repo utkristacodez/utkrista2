@@ -2,7 +2,71 @@
 <html>
 <head>
     <title>Payment System</title>
-    <link rel="stylesheet" type="text/css" href="esewa.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            margin-right: 20px;
+            animation: flashyOutline 0.5s infinite;
+        }
+        @keyframes flashyOutline {
+            0% { border: 5px solid red; }
+            50% { border: 5px solid blue; }
+            100% { border: 5px solid green; }
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .return-home {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #2196F3;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .return-home:hover {
+            background-color: #0b7dda;
+        }
+    </style>
     <script>
         function submitForm(event) {
             event.preventDefault();
@@ -18,7 +82,7 @@
             .then(response => response.text())
             .then(data => {
                 alert(data);
-                alert('Please contact us at: +1234567890');
+                alert('Please contact us at: 9744232216');
             })
             .catch(error => console.error('Error:', error));
         }
@@ -32,30 +96,38 @@
     </script>
 </head>
 <body>
-    <h1>Make a Payment</h1>
-    <img src="esewa_qr.png" alt="eSewa QR Code">
-    <p>Scan the QR code above to make a payment.</p>
+    <div class="container">
+        <div class="image-container">
+            <img src="image.png" alt="eSewa QR Code">
+        </div>
+        <div>
+            <h1>Make a Payment</h1>
+            <p>Scan the QR code above to make a payment.</p>
 
-    <form onsubmit="submitForm(event)">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+            <form onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
 
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required><br>
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount" required><br><br>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
 
-        <label for="date">Date for Delivery:</label>
-        <input type="date" id="date" name="date" required><br><br>
+                <label for="date">Date for Delivery:</label>
+                <input type="date" id="date" name="date" required><br>
 
-        <label for="location">Delivery Location:</label>
-        <input type="text" id="location" name="location" required><br><br>
+                <label for="location">Delivery Location:</label>
+                <input type="text" id="location" name="location" required><br>
 
-        <button type="submit">Submit</button>
-    </form>
+                <button type="submit">Submit</button>
+            </form>
+            <br>
+            <a href="/" class="return-home">Return to Home</a>
+        </div>
+    </div>
 </body>
 </html>
