@@ -67,20 +67,33 @@
         }
     </style>
     <script>
+        function generateRandomCode(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            const charactersLength = characters.length;
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
         function submitForm(event) {
             event.preventDefault();
             const formData = new FormData(event.target);
+            const randomCode = generateRandomCode(10); // generate a 10-character random code
 
             fetch('/submit', {
                 method: 'POST',
-                body: JSON.stringify(Object.fromEntries(formData)),
+                body: JSON.stringify({ ...Object.fromEntries(formData), randomCode }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
             .then(response => response.text())
             .then(() => {
-                alert('YOUR ORDER HAS BEEN SUCCESSFULLY PLACED.');
+                alert('YOUR ORDER HAS BEEN SUCCESSFULLY PLACED.')
+                alert(' Your code: (do save this code)' + randomCode);
+                
                 alert('Please contact us at: 9744232216');
             })
             .catch(error => console.error('Error:', error));
@@ -102,7 +115,6 @@
         </div>
         <div>
             <h1>Make a Payment</h1>
-        
             <form onsubmit="submitForm(event)">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br>
