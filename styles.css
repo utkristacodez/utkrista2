@@ -2,13 +2,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: auto;
-    background: linear-gradient(to right, #f761a1,#8c1bab);
+    background: linear-gradient(to left, #f761a1, #8c1bab);
     background-size: cover;
 }
 
 /* Header Styles */
 header {
-
     color: white;
     padding: 10px 0;
 }
@@ -55,15 +54,24 @@ nav {
 .image-container {
     text-align: center;
     padding-top: 2px; /* Adjust as needed */
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     max-width: 500px; /* Adjust as needed */
     max-height: 300px; /* Adjust as needed */
- animation: rotate 20s infinite linear; /* Rotate continuously */ } 
- @keyframes rotate { from { transform: rotate(45deg); /* Start at 0 degrees */ } to { transform: rotate(-45deg); /* End at 360 degrees */ } }
+    animation: rotate 20s infinite linear; /* Rotate continuously */
+}
 
- .timeline {
+@keyframes rotate {
+    from {
+        transform: rotate(45deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(-45deg); /* End at 360 degrees */
+    }
+}
+
+.timeline {
     display: flex;
     gap: 20px;
     margin-top: 20px;
@@ -81,7 +89,6 @@ nav {
     padding: 10px;
     transition: transform 0.3s;
 }
-
 
 .card:hover {
     transform: scale(1.05);
@@ -137,7 +144,18 @@ button:hover {
     background-color: #555;
 }
 
-#cart { margin-top: 20px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; text-align: center; display: flex; flex-direction: column; align-items: center;}
+#cart {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 footer {
     text-align: center;
@@ -157,9 +175,18 @@ footer {
     text-decoration: underline;
 }
 
-.red { background-color: #ff6b6b; width: fit-content; height: fit-content;}
-.teal { background-color: #4ecdc4; width: fit-content; height: fit-content; }
+.red {
+    background-color: #ff6b6b;
+    width: auto;
+    height: auto;
+}
 
-.text{
+.teal {
+    background-color: #4ecdc4;
+    width: auto;
+    height: auto;
+}
+
+.text {
     color: white;
 }
