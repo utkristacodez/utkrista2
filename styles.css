@@ -82,6 +82,7 @@ nav {
     transition: transform 0.3s;
 }
 
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -156,8 +157,8 @@ footer {
     text-decoration: underline;
 }
 
-.red { background-color: #ff6b6b; width: auto; height: auto;}
-.teal { background-color: #4ecdc4; width: auto; height: auto; }
+.red { background-color: #ff6b6b; width: fit-content; height: fit-content;}
+.teal { background-color: #4ecdc4; width: fit-content; height: fit-content; }
 
 .text{
     color: white;
