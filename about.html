@@ -6,92 +6,88 @@
     <title>About Us | SOFTIX</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
+            background: linear-gradient(to right, #00bcf2, #00b294);
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: #ffffff;
+            background-color: #f4f4f4;
+            color: #333;
             transition: all 0.3s ease;
         }
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
-            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: black;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background: linear-gradient(to right, wheat, pink);
-            font-size: larger;
+            background: linear-gradient(to right, #f761a1, #8c1bab);
+            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
             transition: all 0.3s ease;
         }
         h1, h2, h3 {
-            color: #333;
+            color: whitesmoke;
         }
         p {
             margin: 10px 0;
+            color: azure;
         }
-        .founder-box {
+        .founder-box, .objectives {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
         }
-        .founder {
+        .founder, .objective {
             width: 48%;
-            padding: 10px;
-            background-color: #e7e7e7;
-            border-radius: 5px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
             text-align: center;
             transition: transform 0.3s ease;
         }
-        .founder:hover {
+        .founder:hover, .objective:hover {
             transform: translateY(-5px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .founder img {
+        .founder img, .objective img {
             border-radius: 50%;
             width: 100px;
             height: 100px;
             object-fit: cover;
         }
-        .objectives {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+        .logo img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
         }
-        .objective {
-            width: 30%;
-            padding: 10px;
-            background-color: #e7e7e7;
-            border-radius: 5px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        .objective:hover {
-            transform: translateY(-5px);
-        }
-        .objective img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
+        footer {
 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer-map {
+            width: 250px;
+            height: auto;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-           <a href="index.html"><img src="logo.png" alt="SOFTIX Logo" style="width:150px;"></a>
+           <a href="index.html"><img src="logo.png" alt="SOFTIX Logo"></a>
         </div>
         <h1>About Us</h1>
         <h2>Welcome to SOFTIX</h2>
-        <p>At SOFTIX, we are passionate about crafting adventure footwear that empowers every step you take. Nestled in the heart of the Himalayas, our brand is inspired by the breathtaking landscapes of Nepal and the indomitable spirit of adventurers who conquer new heights.</p>
-        
+    <b>    <p>At SOFTIX, we are passionate about crafting adventure footwear that empowers every step you take. Nestled in the heart of the Himalayas, our brand is inspired by the breathtaking landscapes of Nepal and the indomitable spirit of adventurers who conquer new heights.</p>
+        </b>
         <div class="founder-box">
             <div class="founder">
                 <img src="https://scontent.fktm21-2.fna.fbcdn.net/v/t39.30808-6/422664390_10161087124878149_4391286179244758239_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEdTdlJ0e2dDwjhkFcVsa9wgGnUex2Yw6eAadR7HZjDp9eNG_gyiqnbnQXrt4xJcSWYEgwzGVfOYyElwKkTSDPb&_nc_ohc=yTJUCRmoFLEQ7kNvgGJq2cA&_nc_zt=23&_nc_ht=scontent.fktm21-2.fna&_nc_gid=AaIDS44AiMcVweAsDYHYiW5&oh=00_AYCiZxW0MYpTftlrQsId70eaqN5Ec-X4aaec9GA9tFX0Aw&oe=676BFE1C" alt="Founder 1 Photo" >
-                <h3>Uttkrista Adhikari</h3>
+              <h3>Uttkrista Adhikari</h3>
                 <p><strong>18</strong></p>
                 <p><strong>01-4027290</strong></p>
                 <p>"When we started SOFTIX, our vision was to create footwear that would enable every adventurer to feel confident and comfortable while exploring the great outdoors. Drawing inspiration from the majestic landscapes of Nepal, we embarked on a journey to combine durability, innovation, and sustainability in every pair of shoes we design. Our commitment to quality and customer satisfaction drives us every day, and we are proud to offer products that not only meet but exceed the expectations of our customers."</p>
@@ -118,19 +114,21 @@
         <div class="objectives">
             <div class="objective">
                 <img src="https://th.bing.com/th/id/OIP.PwzbLcMTdxCCIVWXUVwfiAHaHa?rs=1&pid=ImgDetMain" alt="Objective 1 Logo">
-                <p>Our objective is to provide high quality shoes in cheap prices all over the world.</p>
+             <b>   <p>Our objective is to provide high quality shoes in cheap prices all over the world.</p></b>
             </div>
             <div class="objective">
                 <img src="https://thumbs.dreamstime.com/b/made-nepal-stamp-made-nepal-round-grunge-stamp-isolated-white-background-nepal-made-nepal-121580885.jpg" alt="Objective 2 Logo">
-                <p>We want to do it for Nepal.</p>
+                <b><p>We want to do it for Nepal.</p></b>
             </div>
             <div class="objective">
                 <img src="https://static.vecteezy.com/system/resources/previews/019/088/891/original/innovation-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg" alt="Objective 3 Logo">
-                <p>We want to make as much innovations as we can in this field. </p>
+               <b> <p>We want to make as much innovations as we can in this field. </p></b>
             </div>
         </div>
     </div>
-
-
+    <footer>
+        <p>© 2024 SOFTIX. All rights reserved.</p>
+      
+    </footer>
 </body>
 </html>
