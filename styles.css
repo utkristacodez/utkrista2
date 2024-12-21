@@ -79,7 +79,6 @@ nav {
     gap: 20px;
     margin-top: 20px;
     padding: 20px;
-    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -181,16 +180,17 @@ footer {
 
 .red {
     background-color: #ff6b6b;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .teal {
     background-color: #4ecdc4;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .text {
     color: white;
 }
+
